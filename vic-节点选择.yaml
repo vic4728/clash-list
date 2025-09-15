@@ -1,3 +1,4 @@
+payload:
   - IP-CIDR,1.1.1.1/32,🚀 节点选择
   - DOMAIN-SUFFIX,hayav.com,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
