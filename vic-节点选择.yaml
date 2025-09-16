@@ -8,4 +8,6 @@ payload:
   - DOMAIN-SUFFIX,dl.google.com,🚀 节点选择
   - DOMAIN-SUFFIX,dl.l.google.com,🚀 节点选择
   - DOMAIN-SUFFIX,fonts.googleapis.com,🚀 节点选择
+  - DOMAIN-SUFFIX,tmdb.org,🚀 节点选择
+  - DOMAIN-SUFFIX,themoviedb.org,🚀 节点选择
   - DOMAIN-KEYWORD,cloudflare,🚀 节点选择
