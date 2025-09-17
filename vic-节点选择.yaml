@@ -10,4 +10,7 @@ payload:
   - DOMAIN-SUFFIX,fonts.googleapis.com,🚀 节点选择
   - DOMAIN-SUFFIX,tmdb.org,🚀 节点选择
   - DOMAIN-SUFFIX,themoviedb.org,🚀 节点选择
+  - DOMAIN-SUFFIX,ipify.org,🚀 节点选择
+  - DOMAIN-SUFFIX,pics.dmm.co,🚀 节点选择
+  
   - DOMAIN-KEYWORD,cloudflare,🚀 节点选择
