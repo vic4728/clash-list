@@ -1,22 +1,22 @@
 payload:
-  - IP-CIDR,1.1.1.1/32,🚀 节点选择
-  - DOMAIN-SUFFIX,hayav.com,🚀 节点选择
-  - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
-  - DOMAIN-SUFFIX,tu.ymawv.la,🚀 节点选择
-  - DOMAIN-SUFFIX,sehuatang.org,🚀 节点选择
-  - DOMAIN-SUFFIX,sehuatang.net,🚀 节点选择
-  - DOMAIN-SUFFIX,dl.google.com,🚀 节点选择
-  - DOMAIN-SUFFIX,dl.l.google.com,🚀 节点选择
-  - DOMAIN-SUFFIX,fonts.googleapis.com,🚀 节点选择
-  - DOMAIN-SUFFIX,tmdb.org,🚀 节点选择
-  - DOMAIN-SUFFIX,themoviedb.org,🚀 节点选择
-  - DOMAIN-SUFFIX,ipify.org,🚀 节点选择
-  - DOMAIN-SUFFIX,pics.dmm.co,🚀 节点选择
-  - DOMAIN-SUFFIX,mukaku.com,🚀 节点选择
-  - DOMAIN-SUFFIX,img.cfwebname.top,🚀 节点选择
-  - DOMAIN-SUFFIX,i6dh9dl.9bt0.com,🚀 节点选择
-  - DOMAIN-SUFFIX,rou.video,🚀 节点选择
-  - DOMAIN-SUFFIX,v.rn200.xyz,🚀 节点选择
-  - DOMAIN-SUFFIX,v.rn145.xyz,🚀 节点选择
+  - IP-CIDR,1.1.1.1/32
+  - DOMAIN-SUFFIX,hayav.com
+  - DOMAIN-SUFFIX,reddit.com
+  - DOMAIN-SUFFIX,tu.ymawv.la
+  - DOMAIN-SUFFIX,sehuatang.org
+  - DOMAIN-SUFFIX,sehuatang.net
+  - DOMAIN-SUFFIX,dl.google.com
+  - DOMAIN-SUFFIX,dl.l.google.com
+  - DOMAIN-SUFFIX,fonts.googleapis.com
+  - DOMAIN-SUFFIX,tmdb.org
+  - DOMAIN-SUFFIX,themoviedb.org
+  - DOMAIN-SUFFIX,ipify.org
+  - DOMAIN-SUFFIX,pics.dmm.co
+  - DOMAIN-SUFFIX,mukaku.com
+  - DOMAIN-SUFFIX,img.cfwebname.top
+  - DOMAIN-SUFFIX,i6dh9dl.9bt0.com
+  - DOMAIN-SUFFIX,rou.video
+  - DOMAIN-SUFFIX,v.rn200.xyz
+  - DOMAIN-SUFFIX,v.rn145.xy
   
-  - DOMAIN-KEYWORD,cloudflare,🚀 节点选择
+  - DOMAIN-KEYWORD,cloudflare
