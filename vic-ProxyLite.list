@@ -18,4 +18,5 @@ DOMAIN-SUFFIX,tmdb.org
 DOMAIN,image.tmdb.org
 DOMAIN,api.tmdb.org
 DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,mukaku.com
 DOMAIN-KEYWORD,cloudflare
