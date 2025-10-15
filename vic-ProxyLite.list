@@ -11,10 +11,10 @@ DOMAIN-SUFFIX,img.cfwebname.top
 DOMAIN-SUFFIX,i6dh9dl.9bt0.com
 DOMAIN-SUFFIX,rou.video
 DOMAIN-SUFFIX,emby.media
-DOMAIN-SUFFIX,mb3admin.com
 DOMAIN-SUFFIX,tmdb.org
-DOMAIN,image.tmdb.org
-DOMAIN,api.tmdb.org
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,mukaku.com
+DOMAIN,image.tmdb.org
+DOMAIN,api.tmdb.org
+DOMAIN,www.mb3admin.com
 DOMAIN-KEYWORD,cloudflare
