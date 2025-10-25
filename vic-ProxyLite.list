@@ -1,5 +1,4 @@
 #节点代理列表
-IP-CIDR,1.1.1.1/32
 DOMAIN-SUFFIX,hayav.com
 DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,ymawv.la
