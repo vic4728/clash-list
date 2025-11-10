@@ -21,4 +21,13 @@ DOMAIN,api.tmdb.org
 DOMAIN,dockerhub1.beget.com
 DOMAIN,image-mirror.r2.daocloud.vip
 DOMAIN,tupd.xsmy54s.com
-
+DOMAIN,cloudflare.com
+DOMAIN,www.cloudflare.com
+DOMAIN,cdnjs.cloudflare.com
+DOMAIN,api.cloudflare.com
+DOMAIN,dash.cloudflare.com
+DOMAIN,platform.dash.cloudflare.com
+DOMAIN,info.cloudflare.com
+DOMAIN,sparrow.cloudflare.com
+DOMAIN,assets.www.cloudflare.com
+DOMAIN,videodelivery.net
