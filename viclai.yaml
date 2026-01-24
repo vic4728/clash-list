@@ -1,0 +1,344 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - {name: 🇺🇸 美国-hysteria2, server: 104.225.159.5, port: 443, type: hysteria2, ports: 443, password: OIJLuzVwkI, sni: www.fusesbase.com, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 美国-Trojan, server: 104.225.159.5, port: 32636, type: trojan, password: OIJLuzVwkI, sni: www.grlgroup.com, skip-cert-verify: true, network: ws, ws-opts: {path: /vic, headers: {Host: www.grlgroup.com}}, udp: true}
+  - {name: 🇭🇰 香港-Trojan, server: 154.12.63.76, port: 26997, type: trojan, password: iitlbvhHhh, sni: services.digitaleast.mobi, skip-cert-verify: true, network: ws, ws-opts: {path: /vic, headers: {Host: services.digitaleast.mobi}}, udp: true}
+  - {name: 🇭🇰 香港-hysteria2, server: 154.12.63.76, port: 443, type: hysteria2, ports: 443, password: iitlbvhHhh, sni: snap.licdn.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本-hysteria2, server: 38.207.136.242, port: 443, type: hysteria2, ports: 443, password: JxKkbGrtBX, sni: www.fusesbase.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本-trojan, server: 38.207.136.242, port: 46006, type: trojan, password: JxKkbGrtBX, sni: www.grlgroup.com, skip-cert-verify: true, network: ws, ws-opts: {path: /jp, headers: {Host: www.grlgroup.com}}, udp: true}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+  - name: 🇺🇲 美国节点
+    type: select
+    proxies:
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - ♻️ 自动选择
+      - 🎯 全球直连
+  - name: 🇭🇰 香港节点
+    type: select
+    proxies:
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🎯 全球直连
+  - name: 🇯🇵 日本节点
+    type: select
+    proxies:
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+      - 🎯 全球直连
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+  - name: 💬 Ai平台
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇺🇸 美国-hysteria2
+      - 🇺🇸 美国-Trojan
+      - 🇭🇰 香港-Trojan
+      - 🇭🇰 香港-hysteria2
+      - 🇯🇵 日本-hysteria2
+      - 🇯🇵 日本-trojan
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,ChinaIpV6,🎯 全球直连
+  - RULE-SET,Bilibili,🎯 全球直连
+  - RULE-SET,UnBan,🎯 全球直连
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,vic_BanList,🛑 全球拦截
+  - RULE-SET,AI,💬 Ai平台
+  - RULE-SET,OpenAi,💬 Ai平台
+  - RULE-SET,Epic,🎮 游戏平台
+  - RULE-SET,Origin,🎮 游戏平台
+  - RULE-SET,Sony,🎮 游戏平台
+  - RULE-SET,Steam,🎮 游戏平台
+  - RULE-SET,Nintendo,🎮 游戏平台
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,vic-ProxyLite,🚀 节点选择
+  - RULE-SET,vic-HKLite,🇭🇰 香港节点
+  - RULE-SET,vic-USLite,🇺🇲 美国节点
+  - RULE-SET,vic-JPLite,🇯🇵 日本节点
+  - RULE-SET,VIC-Direct,🎯 全球直连
+  - RULE-SET,ChinaIp,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0
+    path: ./providers/7156953299935574564.yaml
+    interval: 86400
+  ChinaIpV6:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9yZWZzL2hlYWRzL21hc3Rlci9DbGFzaC9DaGluYUlwVjYubGlzdA
+    path: ./providers/2182942052225985101.yaml
+    interval: 86400
+  Bilibili:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9yZWZzL2hlYWRzL21hc3Rlci9DbGFzaC9SdWxlc2V0L0JpbGliaWxpLmxpc3Q
+    path: ./providers/8624729668144167608.yaml
+    interval: 86400
+  UnBan:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVW5CYW4ubGlzdA
+    path: ./providers/7573362162235439048.yaml
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFEb21haW4ubGlzdA
+    path: ./providers/4162648423616508953.yaml
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9yZWZzL2hlYWRzL21hc3Rlci9DbGFzaC9CYW5BRC5saXN0
+    path: ./providers/2219694060034534979.yaml
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9yZWZzL2hlYWRzL21hc3Rlci9DbGFzaC9CYW5Qcm9ncmFtQUQubGlzdA
+    path: ./providers/12478463579676263331.yaml
+    interval: 86400
+  vic_BanList:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3ZpYzQ3MjgvY2xhc2gtbGlzdC9yZWZzL2hlYWRzL21haW4vdmljX0Jhbkxpc3QubGlzdA
+    path: ./providers/12466913628065015809.yaml
+    interval: 86400
+  AI:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9BSS5saXN0
+    path: ./providers/7329684518282624683.yaml
+    interval: 86400
+  OpenAi:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9PcGVuQWkubGlzdA
+    path: ./providers/3258957679647165343.yaml
+    interval: 86400
+  Epic:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9FcGljLmxpc3Q
+    path: ./providers/2002866050337731182.yaml
+    interval: 86400
+  Origin:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9PcmlnaW4ubGlzdA
+    path: ./providers/8760189456110913115.yaml
+    interval: 86400
+  Sony:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Tb255Lmxpc3Q
+    path: ./providers/6043895292220349504.yaml
+    interval: 86400
+  Steam:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9TdGVhbS5saXN0
+    path: ./providers/1173690015095316719.yaml
+    interval: 86400
+  Nintendo:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9OaW50ZW5kby5saXN0
+    path: ./providers/8436305167591952502.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTWljcm9zb2Z0Lmxpc3Q
+    path: ./providers/10538434793549721944.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQXBwbGUubGlzdA
+    path: ./providers/14560487744959213540.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVGVsZWdyYW0ubGlzdA
+    path: ./providers/6502624741183612233.yaml
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlNZWRpYS5saXN0
+    path: ./providers/11865208451954205364.yaml
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9yZWZzL2hlYWRzL21hc3Rlci9DbGFzaC9Qcm94eUxpdGUubGlzdA
+    path: ./providers/2269039208275542799.yaml
+    interval: 86400
+  vic-ProxyLite:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3ZpYzQ3MjgvY2xhc2gtbGlzdC9yZWZzL2hlYWRzL21haW4vdmljLVByb3h5TGl0ZS5saXN0
+    path: ./providers/1049271890598656548.yaml
+    interval: 86400
+  vic-HKLite:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3ZpYzQ3MjgvY2xhc2gtbGlzdC9yZWZzL2hlYWRzL21haW4vdmljLUhLTGl0ZS5saXN0
+    path: ./providers/1102880302447742855.yaml
+    interval: 86400
+  vic-USLite:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3ZpYzQ3MjgvY2xhc2gtbGlzdC9yZWZzL2hlYWRzL21haW4vdmljLVVTTGl0ZS5saXN0
+    path: ./providers/5956158325309527584.yaml
+    interval: 86400
+  vic-JPLite:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3ZpYzQ3MjgvY2xhc2gtbGlzdC9yZWZzL2hlYWRzL21haW4vdmljLUpQTGl0ZS5saXN0
+    path: ./providers/10400329604828279474.yaml
+    interval: 86400
+  VIC-Direct:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3ZpYzQ3MjgvY2xhc2gtbGlzdC9yZWZzL2hlYWRzL21haW4vVklDLURpcmVjdC5saXN0
+    path: ./providers/12398130048480981567.yaml
+    interval: 86400
+  ChinaIp:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9DbGFzaC9DaGluYUlwLmxpc3Q
+    path: ./providers/8403322808837195683.yaml
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9DbGFzaC9DaGluYUNvbXBhbnlJcC5saXN0
+    path: ./providers/17487167953345123530.yaml
+    interval: 86400
