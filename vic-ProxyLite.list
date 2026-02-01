@@ -15,6 +15,17 @@ DOMAIN-SUFFIX,emby.media
 DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,apkpure.com
+DOMAIN-SUFFIX,mukaku.com
+DOMAIN-SUFFIX,picdcd.com
+DOMAIN-SUFFIX,istoreos.com
+DOMAIN-SUFFIX,cline.bot
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,pypi.org,
+DOMAIN-SUFFIX,tktn.be
+DOMAIN-KEYWORD,kilo.ai
+DOMAIN-SUFFIX,api1.uiuiapi.com
+DOMAIN-SUFFIX,nullbr.com
+DOMAIN-SUFFIX,sehuatang.net
 DOMAIN,image.tmdb.org
 DOMAIN,api.tmdb.org
 DOMAIN,dockerhub1.beget.com
