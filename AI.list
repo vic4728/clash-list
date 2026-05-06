@@ -24,3 +24,14 @@ DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
+DOMAIN-KEYWORD,google
+DOMAIN-SUFFIX,traeapi.us
+DOMAIN-SUFFIX,models.dev
+DOMAIN-SUFFIX,factory.ai
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,kilo.ai
+DOMAIN-KEYWORD,aistudio.google.com
+DOMAIN-SUFFIX,api1.uiuiapi.com
+DOMAIN-SUFFIX,ai.immersivetranslate.com
+DOMAIN-SUFFIX,api.z.ai
+DOMAIN-KEYWORD,openai
